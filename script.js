@@ -91,7 +91,7 @@ async function displayAlbums() {
       let folder = e.href.split("/").slice(-1)[0];
 
       //Get metadata from the folder
-      let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
+      let a = await fetch(`/songs/${folder}/info.json`);
       let response = await a.json();
 
       cardContainer.innerHTML =
