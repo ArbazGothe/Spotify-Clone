@@ -17,7 +17,7 @@ body {
 
 .left {
   width: 28vw;
-  padding: 3px;
+  padding: 4px;
 }
 
 .right {
@@ -25,39 +25,47 @@ body {
 }
 
 .home .logo img {
-  height: 14px;
+  height: 35px;
 }
+
 .home ul li {
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 10px;
-  width: 14px;
   padding-top: 10px;
-  font-size: 9px;
+  font-size: 14px;
   font-weight: bold;
-  height: 13px;
   cursor: pointer;
+  width: 25px;
+  height: 25px;
+  padding-bottom: 6px;
 }
 
 .library ul li {
   display: flex;
   list-style: none;
-  gap: 10px;
-  font-size: 9px;
+  gap: 15px;
+  font-size: 15px;
   font-weight: bold;
-  height: 13px;
   cursor: pointer;
+  width: 100%;
+  height: 30px;
+}
+.library ul li p {
+  display: flex;
+  align-items: center;
 }
 
 .library {
-  min-height: 69vh;
+  min-height: 74vh;
   position: relative;
 }
 
 .footer {
   display: flex;
-  font-size: 6px;
-  gap: 8px;
+  font-size: 11px;
+  gap: 12px;
   position: absolute;
   bottom: 0;
   padding: 10px 0;
@@ -69,13 +77,14 @@ body {
 }
 
 .right {
-  margin: 7px 0;
+  margin: 8px 0;
   position: relative;
 }
 
 .header .nav svg {
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
 }
 
 .header {
@@ -83,7 +92,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  height: 10px;
+  height: 50px;
   background-color: #0d0b0b;
 }
 
@@ -106,26 +115,25 @@ body {
   border-radius: 80px;
   border: none;
   outline: none;
-  font-size: 10px;
+  font-size: 20px;
   font-weight: bold;
 }
 
 .buttons .btn-1 {
   background-color: #0d0b0b;
   color: rgb(143, 135, 135);
-  padding-right: 20px;
+  padding: 8px 22px;
   cursor: pointer;
 }
 
 .buttons .btn-1:hover {
   color: white;
-  font-size: 10.5px;
 }
 
 .buttons .btn-2 {
   background-color: white;
   color: black;
-  padding: 8px 16px;
+  padding: 8px 22px;
   cursor: pointer;
 }
 
@@ -134,8 +142,8 @@ body {
 }
 
 .spotifyPlaylists h1 {
-  font-size: 16px;
-  padding: 17px;
+  font-size: 33px;
+  padding: 20px;
 }
 
 .card-container {
@@ -148,8 +156,8 @@ body {
 }
 
 .card {
-  width: 90px;
-  padding: 10px;
+  width: 160px;
+  padding: 15px;
   border-radius: 5px;
   background-color: #252525;
   position: relative;
@@ -163,24 +171,24 @@ body {
 }
 
 .spotifyPlaylists .card h2 {
-  font-size: 12px;
+  padding: 8px 0;
+  font-size: 19px;
 }
 
 .spotifyPlaylists .card p {
-  font-size: 7px;
-  line-height: 10px;
-  padding-top: 3px;
+  font-size: 12px;
   color: rgb(134, 111, 111);
 }
 
 .card img {
   width: 100%;
   object-fit: contain;
+  border-radius: 3px;
 }
 
 .play {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: #1fdf64;
   display: flex;
@@ -188,7 +196,7 @@ body {
   align-items: center;
   position: absolute;
   right: 9px;
-  top: 70px;
+  top: 130px;
   opacity: var(--a);
   transition: all 1s ease-out;
 }
@@ -202,7 +210,7 @@ body {
   position: fixed;
   bottom: 0;
   background-color: #1a1f1c;
-  padding: 5px;
+  padding: 20px 5px;
   width: 72%;
   display: flex;
   justify-content: center;
@@ -211,17 +219,17 @@ body {
 
 .playBar .songsButtons {
   display: flex;
-  height: 30px;
+  height: 40px;
   cursor: pointer;
 }
 
 .playBar .seekBar {
-  height: 2px;
-  width: 93%;
+  height: 3px;
+  width: 90%;
   background: white;
   border-radius: 10px;
   position: absolute;
-  bottom: 4px;
+  bottom: 5px;
   cursor: pointer;
 }
 
@@ -236,46 +244,45 @@ body {
 }
 
 .songList {
-  height: 250px;
-  overflow: auto;
+  height: 400px;
+  overflow-y: auto;
 }
 
 .songList ul {
-  padding: 14px 5px;
+  padding: 13px 25px;
 }
 
 .songList ul li {
   list-style-type: decimal;
   display: flex;
   justify-content: space-evenly;
-  gap: 10px;
+  gap: 8px;
   cursor: pointer;
-  padding: 12px 4px;
+  padding: 12px 2px;
   border: 1px solid white;
   margin: 12px 0;
   border-radius: 5px;
-  height: 20px;
 }
 
 .songList .songInfo {
-  font-size: 7px;
-  width: 88px;
-  margin: 5px;
+  font-size: 11px;
+  width: 110px;
+  margin: 4px;
 }
 
 .playNow {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .playNow span {
-  font-size: 6px;
+  font-size: 11px;
 }
 
 .playNow img {
-  height: 20px;
+  height: 28px;
 }
 
 .aboveBar {
@@ -283,17 +290,17 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .aboveBar .songInfo {
-  width: 182px;
+  width: 210px;
 }
 
 .aboveBar .timvol {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .volume {
@@ -305,21 +312,25 @@ body {
 
 .volume input {
   height: 3px;
-  width: 50px;
-  cursor: pointer;
-}
-.volume img {
+  width: 80px;
   cursor: pointer;
 }
 
-@media (max-width: 800px) {
+.volume img {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
   .left {
     background-color: black;
     position: absolute;
     z-index: 1;
     left: -120%;
-    width: 259px;
+    width: 400px;
     transition: all 0.3s;
+    padding: 0;
   }
   .left .close img {
     display: block;
@@ -336,11 +347,11 @@ body {
   }
 
   .library {
-    min-height: 78vh;
+    min-height: 77vh;
   }
   .right {
     width: 100vw;
-    height: 465px;
+    height: 100%;
   }
   .playBar {
     width: 99%;
@@ -353,6 +364,7 @@ body {
   }
 }
 
+/* Media query for max-width: 520px */
 @media (max-width: 520px) {
   .playBar .aboveBar .songInfo {
     font-size: 13px;
@@ -360,94 +372,113 @@ body {
   .playBar .aboveBar .songTime {
     font-size: 10px;
   }
-  .aboveBar .songInfo {
-    width: 145px;
-  }
-  /* .playBar .aboveBar .songsButtons {
-    width: 135px;
-  } */
 }
 
-@media (max-width: 430px) {
-  .playBar .aboveBar .songInfo {
-    font-size: 12px;
-  }
-  .playBar .aboveBar .songTime {
-    font-size: 12px;
-  }
-  .playBar .aboveBar .songsButtons {
-    width: 80px;
-  }
-  .aboveBar .songInfo {
-    width: 55px;
-    font-size: 10px;
-  }
-}
-
-@media (max-width: 350px) {
+@media (max-width: 450px) {
   .aboveBar {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    line-height: 33px;
+    line-height: 35px;
   }
-
-  .aboveBar .songInfo {
-    font-size: 12px;
-    width: 100%;
-  }
-
   .aboveBar .songsButtons {
-    width: 100%;
+    width: 50px;
     display: flex;
     justify-content: center;
+  }
+
+  .aboveBar .timvol {
+    gap: 23px;
   }
   .card {
     width: 70vw;
   }
-  .card-container {
-    justify-content: center;
-    max-height: 54vh;
+  .playBar {
+    padding: 4px 3px;
+  }
+  .playBar .aboveBar .songInfo {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .playBar .aboveBar .songTime {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .spotifyPlaylists h1 {
+    font-size: 20px;
+  }
+
+  .header .buttons button {
+    border-radius: 80px;
+    font-size: 12px;
+    font-weight: bold;
   }
   .left {
-    min-height: 99vh;
-    width: 330px;
-    padding: 0;
-  }
-  .library {
-    min-height: 99vh;
+    width: 440px;
   }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 360px) {
   .left {
-    min-height: 99vh;
+    width: 345px;
+    padding: 0;
+  }
+  .card {
+    width: 68vw;
+  }
+  .footer {
+    font-size: 9px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 320px) {
+  .left {
     width: 300px;
     padding: 0;
+  }
+
+  .header .buttons button {
+    border-radius: 80px;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  .buttons .btn-1 {
+    padding: 8px 10px;
+  }
+
+  .buttons .btn-2 {
+    padding: 8px 10px;
+  }
+  .card {
+    width: 68vw;
+  }
+  .footer {
+    font-size: 8px;
+    gap: 9px;
   }
 }
 
 @media (max-width: 250px) {
-  .playBar .aboveBar .songInfo {
-    font-size: 11px;
+  .left {
+    width: 260px;
+    padding: 0;
   }
-  .playBar .aboveBar .songsButtons {
-    height: 24px;
-  }
-  .playBar .aboveBar .songTime {
-    font-size: 10px;
-  }
-  /* .left {
-    min-height: 99vh;
-    width: 100px;
-  } */
 
-  .header .buttons {
-    display: flex;
-  }
   .header .buttons button {
-    font-size: 7px;
-    padding-right: 12px;
+    font-size: 9px;
+  }
+  .buttons .btn-1 {
+    padding: 8px 9px;
+  }
+
+  .buttons .btn-2 {
+    padding: 8px 9px;
+  }
+  .footer {
+    font-size: 8px;
+    gap: 9px;
+    flex-wrap: wrap;
   }
 }
