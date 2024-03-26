@@ -57,7 +57,6 @@ async function getSongs(folder) {
     document.querySelector(".songList").getElementsByTagName("li")
   ).forEach((e) => {
     e.addEventListener("click", (element) => {
-      // console.log(e.querySelector(".songInfo").firstElementChild.innerHTML);
       playMusic(
         e.querySelector(".songInfo").firstElementChild.innerHTML.trim()
       );
@@ -72,7 +71,6 @@ const playMusic = (track, pause = false) => {
     currentSong.play();
     play.src = "img/pause.svg";
   }
-  // console.log(track);
   document.getElementById("songinfo").innerHTML = decodeURI(track);
   document.querySelector(".songTime").innerHTML = "00:00 / 00:00";
 };
@@ -91,11 +89,11 @@ async function displayAlbums() {
 
     if (e.href.includes("/songs/")) {
       let folder = e.href.split("/").slice(-1)[0];
-      // console.log(folder);
+
       //Get metadata from the folder
       let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`);
       let response = await a.json();
-      // console.log(response);
+
       cardContainer.innerHTML =
         cardContainer.innerHTML +
         `
@@ -128,9 +126,7 @@ async function displayAlbums() {
 
   //Load the playlist whenever card is clicked
   Array.from(document.getElementsByClassName("card")).forEach((e) => {
-    // console.log(e);
     e.addEventListener("click", async (item) => {
-      // console.log(item, item.currentTarget.dataset);
       songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`);
       playMusic(songs[0]);
     });
@@ -158,7 +154,6 @@ async function main() {
 
   // Listen for timeupdate event
   currentSong.addEventListener("timeupdate", () => {
-    // console.log(currentSong.currentTime, currentSong.duration);
     document.querySelector(".songTime").innerHTML = `
     ${secondsToMinutesAndSeconds(currentSong.currentTime)}/
     ${secondsToMinutesAndSeconds(currentSong.duration)}
@@ -213,7 +208,6 @@ async function main() {
 
   //Add an event listener on mute the track
   document.querySelector(".volume>img").addEventListener("click", (e) => {
-    console.log(e.target);
     if (e.target.src.includes("volume.svg")) {
       e.target.src = e.target.src.replace("volume.svg", "mute.svg");
       currentSong.volume = 0;
